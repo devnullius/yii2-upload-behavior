@@ -291,7 +291,7 @@ class GD extends PHPThumb
         $this->calcImageSizeStrict($this->currentDimensions['width'], $this->currentDimensions['height']);
 
         // resize the image to be close to our desired dimensions
-        $this->resize($this->newDimensions['newWidth'], $this->newDimensions['newHeight']);
+        $this->resize((int)$this->newDimensions['newWidth'], (int)$this->newDimensions['newHeight']);
 
         // reset the max dimensions...
         if ($this->options['resizeUp'] === false) {
@@ -1207,8 +1207,8 @@ class GD extends PHPThumb
         $newWidth = ($width * $newHeightPercentage) / 100;
 
         return [
-            'newWidth' => ceil($newWidth),
-            'newHeight' => ceil($this->maxHeight),
+            'newWidth' => (int)ceil($newWidth),
+            'newHeight' => (int)ceil($this->maxHeight),
         ];
     }
 
@@ -1226,8 +1226,8 @@ class GD extends PHPThumb
         $newHeight = ($height * $this->percent) / 100;
 
         return [
-            'newWidth' => ceil($newWidth),
-            'newHeight' => ceil($newHeight),
+            'newWidth' => (int)ceil($newWidth),
+            'newHeight' => (int)ceil($newHeight),
         ];
     }
 
