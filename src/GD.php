@@ -59,7 +59,7 @@ class GD extends PHPThumb
      *
      * @var array
      */
-    protected array $options;
+    protected array $options = [];
 
     /**
      * The maximum width an image can be after resizing (in pixels)
