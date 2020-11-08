@@ -39,10 +39,10 @@ class FileUploadBehavior extends Behavior
      * @var string Attribute used to link owner model with it's parent
      * @deprecated Use attribute_xxx placeholder instead
      */
-    public string $parentRelationAttribute;
+    public string $parentRelationAttribute = '';
 
     /** @var UploadedFile */
-    protected UploadedFile $file;
+    protected ?UploadedFile $file = null;
 
     /**
      * @inheritdoc

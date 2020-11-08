@@ -27,33 +27,33 @@ abstract class PHPThumb
      *
      * @var string
      */
-    protected string $fileName;
+    protected string $fileName = '';
 
     /**
      * @var Filesystem
      */
-    protected Filesystem $filesystem;
+    protected ?Filesystem $filesystem = null;
 
     /**
      * What the file format is (mime-type)
      *
      * @var string
      */
-    protected string $format;
+    protected string $format = '';
 
     /**
      * Whether or not the image is hosted remotely
      *
      * @var bool
      */
-    protected bool $remoteImage;
+    protected bool $remoteImage = false;
 
     /**
      * An array of attached plugins to execute in order.
      *
      * @var array
      */
-    protected array $plugins;
+    protected array $plugins = [];
 
     /**
      * @param       $fileName

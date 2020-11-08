@@ -9,7 +9,7 @@ use yii\helpers\ArrayHelper;
 
 final class FileUploadException extends Exception
 {
-    public string $errorCode;
+    public string $errorCode = '';
 
     public array $errors = [
         UPLOAD_ERR_OK => 'There is no error, the file uploaded with success.',
